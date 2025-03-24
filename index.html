@@ -1,554 +1,132 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+<!DOCTYPE html>
+<html>
 
-        <title>Taconic CTE IT &amp; CyberSecurity Shop</title>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Inspection</title>
+  <style>
+    body {
+      background-color: aliceblue;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
 
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">       
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-        <link href="css/green-week.css" rel="stylesheet">      
-    </head>
-    
-    <body id="top">
-        <main>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
+    h1 {
+      color: royalblue;
+      font-size: 3rem;
+      font-family: 'Times New Roman', sans-serif;
+    }
 
-                    <div class="d-lg-none ms-auto me-4">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                    </div>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
-                            </li>
+    p {
+      font-size: 1rem;
+      font-weight: normal;
+    }
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2">Schedule</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3">Assigments</a>
-                            </li>
+    h2 {
+      font-weight: 500;
+    }
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Resources</a>
-                            </li>
-   
-                        </ul>
+    .quiz {
+      margin: 20px;
+      text-align: left;
+    }
 
-                    </div>
-                </div>
-            </nav>
-            
-            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-                <div class="container">
-                    <div class="row">
+    .question {
+      font-size: 18px;
+      font-weight: normal;
+      text-align: left;
+      margin: 20px;
+    }
 
-                        <div class="col-lg-8 col-12 mx-auto">
-                            <h1 class="text-white text-center">Learn. Practice. Discover</h1>
-                            <h5 class="text-center">CTE IT Shop Online Platform for Sophomores</h5>
-                        </div>
+    .answer {
+      font-size: 16px;
+      font-weight: normal;
+      text-align: left;
+      margin: 20px;
+    }
+  </style>
+</head>
 
-                    </div>
-                </div>
-            </section>
+<body>
+  <h1>Inspect Me</h1>
+  <h2>This is an simple website to learn how to do CSS Inspection</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+    viverra euismod odio, gravida pellentesque urna varius vitae.
+    Suspendisse potenti. Morbi commodo, ipsum in blandit hendrerit,
+    velit enim ornare nisi, eget consequat libero libero eu libero.
+    Donec varius, sem eget ornare commodo, quam libero pretium
+    libero, euismod blandit mauris nunc in magna.
+  </p>
+  <hr />
+  <div class="quiz">
+    <div class="question">
+      Q.1 What is the named color of the body?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer1">
+      <button onclick="checkAnswer1()">Submit</button>
+      <p id="result1"></p>
+    </div>
+    <div class="question">
+      Q.2 What is the font size of the h1?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer2">
+      <button onclick="checkAnswer2()">Submit</button>
+      <p id="result2"></p>
+    </div>
+    <div class="question">
+      Q.3 What is the font weight of the h2?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer3">
+      <button onclick="checkAnswer3()">Submit</button>
+      <p id="result3"></p>
+    </div>
+    <div class="question">
+      Q.4 What is the font family of the p?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer4">
+      <button onclick="checkAnswer4()">Submit</button>
+      <p id="result4"></p>
+    </div>
+  </div>
+</body>
+<script>
+  function checkAnswer1() {
+    var answer = document.getElementById("answer1").value;
+    if (answer.toLowerCase() === "aliceblue" || answer.toLowerCase() === "alice blue") {
+      document.getElementById("result1").innerHTML = "Correct!";
+    } else {
+      document.getElementById("result1").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer2() {
+    var answer = document.getElementById("answer2").value;
+    if (answer.toLowerCase() === "3rem" || answer.toLowerCase() === "3 rem") {
+      document.getElementById("result2").innerHTML = "Correct!";
+    } else {
+      document.getElementById("result2").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer3() {
+    var answer = document.getElementById("answer3").value;
+    if (answer.toLowerCase() === "500") {
+      document.getElementById("result3").innerHTML = "Correct!";
+    } else {
+      document.getElementById("result3").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer4() {
+    var answer = document.getElementById("answer4").value;
+    if (answer.toLowerCase() === "arial" || answer.toLowerCase() === "arial, sans-serif" || answer.toLowerCase() === "sans-serif" || answer.toLowerCase() === "sans serif") {
+      document.getElementById("result4").innerHTML = "Correct!";
+    } else {
+      document.getElementById("result4").innerHTML = "Incorrect. Try again.";
+    }
+  }
+</script>
 
-            <section class="featured-section">
-                <div class="container">
-                    <div class="row justify-content-center">
-
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">Week 14 (Mar 24 - 28)</h5>
-                                            <p class="mb-0">This week, we are going to talk about <strong>CSS</strong> advanced application and <strong>JavaScript</strong>. CSS and JS are very important for Webpage.
-                                                So make sure you understand these contents and have plenty of practice.
-                                            </p>
-                                        </div>
-
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="custom-block custom-block-overlay">
-                                <div class="d-flex flex-column h-100">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FpMNs7H24X0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="explore-section section-padding" id="section_2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <h2 class="mb-4">Schedule</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">MON</button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">TUE</button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">WED</button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">THU</button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">FRI</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-12">
-                            <div class="tab-content" id="myTabContent">
-                                <!-- Monday Pane -->
-                                <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Monday</h5>
-                                                            <p class="mb-0">Today is March 17.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/mon.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Content</h5>
-                                                            <p class="mb-0">Today's topic is RAM. Please read Chapter XX for the topic.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/book.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">File &amp; Link</h5>
-                                                            <p class="mb-0">Click the link to open today's File or Link (if it's available)</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/ppt.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end of Monday Pane -->
-                                
-                                <!-- Tuesday Pane -->
-                                <!--<div class="tab-pane fade show active" id="marketing-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">-->
-                                <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Tuesday</h5>
-                                                            <p class="mb-0">Today is March 18.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/tue.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Content</h5>
-                                                            <p class="mb-0">Today's topic is RAM. Please read Chapter XX for the topic.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/book.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">File &amp; Link</h5>
-                                                            <p class="mb-0">Click the link to open today's File or Link (if it's available)</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/ppt.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end of Tuesday Pane -->
-                                
-                                <!-- Wed Pane -->
-                                <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Wedsnesday</h5>
-                                                            <p class="mb-0">Today is March 19.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/wed.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Content</h5>
-                                                            <p class="mb-0">Today's topic is RAM. Please read Chapter XX for the topic.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/book.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">File &amp; Link</h5>
-                                                            <p class="mb-0">Click the link to open today's File or Link (if it's available)</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/ppt.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end of Wed Pane -->
-                                
-                                <!-- Thur Pane -->
-                                <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Thursday</h5>
-                                                            <p class="mb-0">Today is March 20.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/thu.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Content</h5>
-                                                            <p class="mb-0">Today's topic is RAM. Please read Chapter XX for the topic.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/book.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">File &amp; Link</h5>
-                                                            <p class="mb-0">Click the link to open today's File or Link (if it's available)</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/ppt.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end of Thur Pane -->
-                                
-                                <!-- Fri Pane -->
-                                <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Friday</h5>
-                                                            <p class="mb-0">Today is March 20.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/fri.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Content</h5>
-                                                            <p class="mb-0">Today's topic is RAM. Please read Chapter XX for the topic.</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/book.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <!--<a href="topics-detail.html">-->
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">File &amp; Link</h5>
-                                                            <p class="mb-0">Click the link to open today's File or Link (if it's available)</p>
-                                                        </div>
-                                                    </div>
-                                                    <img src="images/topics/ppt.png" class="custom-block-image img-fluid" alt="">
-                                                <!--</a>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end of Fri Pane -->
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="timeline-section section-padding" id="section_3">
-                <div class="section-overlay"></div>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <h3 class="mb-4">Activities and Assignments</h3>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                        <div class="col-lg-5 col-12">
-                            <img src="images/faq_graphic.png" class="img-fluid" alt="FAQs">
-                        </div>
-
-                        <div class="col-lg-6 col-12 m-auto">
-                            <div class="accordion" id="accordionExample">
-                                <!--Assignment One-->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        RAID Essay
-                                        </button>
-                                    </h2>
-
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Write an essay about RAID (about 2 - 3 paragraphs),
-                                            read the textbook on page 495, the section about RAID.
-                                            Compare RAID 10 and RAID 0+1. Which one is better?
-                                            Do a bit of research and tell me your conclusion. 
-                                            No correct or wrong answer, but justify your opinion.
-                                            Turn in your work before this Sunday.
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Assignment Two-->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Read Chapter 8
-                                    </button>
-                                    </h2>
-
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            If you can read Chapter07 of CompTIA A+ book, that would be great. We will not go over this section together in class. So make sure you are 
-                                            familiar with the Power Supply in a computer.
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Assignment Three-->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Re-use Old Laptops
-                                    </button>
-                                    </h2>
-
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            We will spend Friday to practice content about BIOS. We will check out the antique laptops I found in our inventory and 
-                                            see how can we use them. If you have any idea or suggestion, we can discuss together.
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- End of Assm-->
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="contact-section section-padding section-bg" id="section_5">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12 text-center">
-                            <h2 class="mb-5">Resources</h2>
-                        </div>
-
-                        <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                            <iframe class="google-map" width="100%" height="100%" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="Lofi music" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
-                            <h4 class="mb-3">Links</h4>
-                            <!--<hr>-->
-
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Canvas</span>
-                                <a href="https://pittsfield.instructure.com/courses/21215" class="site-footer-link">
-                                    go to Canvas
-                                </a>
-                            </p>
-
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Clever</span>
-                                <a href="https://clever.com/in/pittsfieldma/student" class="site-footer-link">
-                                    open Clever
-                                </a>
-                            </p>
-                                                
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Gmail</span>
-                                <a href="https://mail.google.com/" class="site-footer-link">
-                                    open your email
-                                </a>
-                            </p>
-                            
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Google Drive</span>
-                                <a href="https://drive.google.com/drive/my-drive" class="site-footer-link">
-                                    files on cloud
-                                </a>
-                            </p>
-                            
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Taconic</span>
-                                <a href="https://taconic.pittsfield.net/en-US" class="site-footer-link">
-                                    THS website
-                                </a>
-                            </p>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mx-auto">
-                            <h4 class="mb-3">Video</h4>
-                            <p>Help to learn topics of the week</p>
-                            <hr>
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Firmware</span>
-                                <a href="https://www.youtube.com/watch?v=DBW8YRv_83A" class="site-footer-link" target="_blank">
-                                    What's Firmware
-                                </a>
-                            </p>
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">MOBO</span>
-                                <a href="https://www.youtube.com/watch?v=fsIh2eoWLT4" class="site-footer-link" target="_blank">
-                                    Choosing MOBO
-                                </a>
-                            </p>
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">RAID</span>
-                                <a href="https://www.youtube.com/watch?v=4J7iSumiJNk" class="site-footer-link" target="_blank">
-                                    RAID 10/0+1
-                                </a>
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/custom.js"></script>
-
-    </body>
 </html>
